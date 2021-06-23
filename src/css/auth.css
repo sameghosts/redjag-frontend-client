@@ -1,0 +1,50 @@
+.authButton {
+    background-color: #540D6E;
+    color: white;
+    padding: .5rem;
+    margin: .5rem;
+    width: 40%;
+    border-radius: .5rem;
+}
+
+.authForm {
+    place-items: center;
+    display:flex;
+    flex-direction: column;
+    width:80%;
+}
+
+.authUsernameGroup {
+    width: 100%;
+}
+
+.authUsernameControl {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.authEmailGroup {
+    width: 100%;
+}
+
+.authEmailControl {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.authPasswordGroup {
+    width: 100%;
+}
+
+.authPasswordControl {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.authContainer {
+    width: 50vw;
+    margin-left: 50vw;
+}
