@@ -6,29 +6,34 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
+//Import pictures
+import HeaderIllustration from '../../Images/LandingPage/HeaderIllustration.svg';
+
 
 function DefaultLanding() {
     return (
-        <Container className="landingContainer" fluid>
-            <Row lg={2} md={2} sm={2}>
-                <Col sm={8}>
-                    <Row>
+        <Container id="landingContainer" fluid={true}>
+            
+                <Col lg='6' md='6' sm='6' id="landingColumnLeft">
+                    <Row id="landingRowTop">
                         <h2>Hello...</h2>
                         <h1>Welcome To Tracker</h1>
                     </Row>
-                    <Row>
-                        <p>Tracker was designed to help job seekers in job searching, job applications, and networking endeavors.</p>
+                    <Row id="landingRowMiddle">
+                        <p>
+                            Tracker was designed to help job seekers in job searching, job applications, and networking endeavors.
+                        </p>
                     </Row>
-                    <Row>
-                        <Button>
+                    <Row id="landingRowThree">
+                        <Button id="landingButton" variant="primary" size="lg" active>
                             Learn More
                         </Button>
                     </Row>
                 </Col>
-                <Col sm={4}>
-                    <h1>An image will go here</h1>
+                <Col lg='6' md='6' sm='6'>
+                    <Image id="landingImage" src={HeaderIllustration} />
                 </Col>
-            </Row>
+            
         </Container>
     )
 }
