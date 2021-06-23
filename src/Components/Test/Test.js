@@ -5,7 +5,7 @@ import LandingPortal from '../Landing/LandingPortal';
 function Test() {
     return (
         <div>
-            <LandingPortal />
+        
         </div>
     )
 }
