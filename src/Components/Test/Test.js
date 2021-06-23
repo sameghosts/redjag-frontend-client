@@ -1,11 +1,11 @@
 import React from 'react'
 
-import LandingPortal from '../Landing/LandingPortal';
+import AuthPortal from '../Auth/AuthPortal';
 
 function Test() {
     return (
         <div>
-        
+            <AuthPortal />
         </div>
     )
 }
