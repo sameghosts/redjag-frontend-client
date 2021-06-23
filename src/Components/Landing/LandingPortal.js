@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+
+//Components
+import DefaultLanding from './DefaultLanding';
 
 function LandingPortal() {
     return (
         <div>
-            
+            <DefaultLanding />
         </div>
     )
 }
