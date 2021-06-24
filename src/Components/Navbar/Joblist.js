@@ -10,33 +10,30 @@ const Joblist = ({jobs}) => {
     console.log(jobs)
 
     return jobs.map((job, index) => (
-        <Container>
             <Row>
-                <Col>
+                <td>
                     {job.id}
-                </Col>
-                <Col>
+                </td>
+                <td>
                     {job.jobName}   
-                </Col>
-                <Col>
+                </td>
+                <td>
                     {job.companyName}   
-                </Col>
-                <Col>
+                </td>
+                <td>
                     {job.location}  
-                </Col>
-                <Col>
+                </td>
+                <td>
                     {job.jobType}   
-                </Col>
-                <Col>
+                </td>
+                <td>
                     {job.remote}    
-                </Col>
-                <Col>
+                </td>
+                <td>
                     {job.experience}    
-                </Col>
-
+                </td>
+                <Button>Star Icon</Button>
             </Row>
-            
-        </Container>
     ))
 }
 
