@@ -6,7 +6,6 @@ import NavbarPortal from '../Navbar/NavbarPortal'
 function Test() {
     return (
         <div>
-            <AuthPortal />
             <NavbarPortal />
         </div>
     )
