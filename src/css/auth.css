@@ -56,6 +56,11 @@
     margin-left: 50vw;
 }
 
+
+.authContainer.hidden {
+    display: hidden;
+} 
+
 #authForgotPassword {
     color:black;
 }
@@ -65,3 +70,4 @@
     text-decoration: underline;
     cursor: pointer;
 }
+

@@ -26,7 +26,7 @@ export default function Login({ setUsername, setPassword }) {
     };
 
     return (
-        <Container className="authContainer">
+        <Container className="authContainer hidden">
             <Row>
                 <Form className="authForm" onSubmit={loginHandler}>
                 <Form.Group className="authUsernameGroup" >
