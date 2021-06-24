@@ -48,3 +48,7 @@
     width: 50vw;
     margin-left: 50vw;
 }
+
+.authContainer.hidden {
+    display: hidden;
+} 

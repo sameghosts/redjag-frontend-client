@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 export default function Login({ setUsername, setPassword }) {
     return (
-        <Container className="authContainer">
+        <Container className="authContainer hidden">
             <Row>
                 <Form className="authForm">
                 <Form.Group className="authUsernameGroup" >
