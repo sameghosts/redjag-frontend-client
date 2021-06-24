@@ -55,7 +55,9 @@ export default function Login({ setUsername, setPassword }) {
                     >
                         Log In
                     </Button>
-                    <Form.Text onClick={forgotPassword}>Forgot your password?</Form.Text>
+                    <Button onClick={forgotPassword} id='authForgotPassword'>
+                            Forgot your password?
+                    </Button>
                 </Form>
             </Row>
         </Container>
