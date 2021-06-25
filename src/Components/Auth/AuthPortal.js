@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
-import Login from './Login.js'
+import Login from './Login'
 import Signup from './Signup'
 
 export default function AuthPortal() {
