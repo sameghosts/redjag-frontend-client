@@ -31,17 +31,18 @@ export default function NavbarPortal() {
     console.log(data.data)
 
     return (
-        <Container className="navbarContainer">
+        <Container className="navbarContainer" fluid>
           <Row>
             <Search setJobQuery={setJobQuery} />
           </Row>
           <Row>
-            <Col>
+            <Col className="jobColOne">
               <Row>
+                <h1>Job Openings</h1>
                 <JobDetails data={data.data} />
               </Row>
             </Col>
-            <Col>
+            <Col className="jobColTwo" xs={8} sm={8} md={8} lg={8}>
             <Tabs>
               <Tab eventKey="Jobs" title="Jobs">
                 <JobTable jobs={jobs} /> 

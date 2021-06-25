@@ -12,6 +12,8 @@ export default function Search({ setJobQuery }) {
     return (
         <div>
             <Navbar>
+                <Button>Sort</Button>
+                <Button>Filter</Button>
                 <Form inline>
                     <Form.Control type="text" placeholder="Search" onChange={queryHandler} />
                     <Button variant="outline-success" >Search</Button>
