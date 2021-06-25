@@ -1,5 +1,6 @@
 .navbarContainer {
     width:80%;
+    margin: 10 auto;
 }
 
 .jobCard {
@@ -33,4 +34,13 @@
 
 .jobDescription {
     white-space: pre-wrap;
+    text-overflow:hidden;
+    overflow: scroll;
+    height: 49vh;
+
+}
+
+.jobNavbar {
+    height: 80vh;
+    justify-content: space-evenly;
 }
