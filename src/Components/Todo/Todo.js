@@ -1,15 +1,12 @@
 import React from 'react'
 
-import ArrayTodo from './ArrayTodo';
-import EmptyTodo from './EmptyTodo';
-
 import {
     Card,
     Container,
     Button
 } from 'react-bootstrap';
 
-export default  function Todo({ key, text, todoArray, setTodoArray, todo }) {
+export default  function Todo({ key, text, todoArray, setTodoArray, todo, setDisplayTodo }) {
 
     const deleteHandler = () => {
         setTodoArray(todoArray.filter(el => el.id !== todo.id))
@@ -17,6 +14,7 @@ export default  function Todo({ key, text, todoArray, setTodoArray, todo }) {
 
     const editHandler = () => {
         console.log('click')
+        setDisplayTodo(todo);
     };
 
 
