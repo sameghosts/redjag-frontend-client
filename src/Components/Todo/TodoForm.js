@@ -21,6 +21,8 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
         setTodoFormString('');
     }
 
+
+
     return (
         <Container className="todoContainer">
             <Row>
@@ -29,7 +31,7 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
                         <Form.Label>
                             Create a Todo:
                         </Form.Label>
-                        <Form.Control type="text" onChange={inputTextHandler} />
+                        <Form.Control value={todoFormString} type="text" onChange={inputTextHandler} />
                         <Button onClick={submitTodoHandler} type="submit">Create</Button>
                     </Form.Group>
                     <Form.Group>

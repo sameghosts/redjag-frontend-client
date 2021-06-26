@@ -2,12 +2,22 @@ import React from 'react';
 
 import Todo from './Todo';
 
-export default function TodoList({ todoArray }) {
-    console.log(todoArray)
+export default function TodoList({ todoArray, setTodoArray }) {
+
     return (
         <div>
            <h1>Things to do</h1>
-           <Todo todoArray={todoArray} />
+           <ul>
+                {todoArray.map((todo) => (
+                    <Todo 
+                        todo={todo}
+                        text={todo.text}
+                        key={todo.id} 
+                        todoArray={todoArray} 
+                        setTodoArray={setTodoArray} 
+                    />
+                ))}
+           </ul>
         </div>
     )
 }

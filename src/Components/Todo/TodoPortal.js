@@ -26,11 +26,11 @@ export default function TodoPortal() {
                         todoArray={todoArray}
                         todoFormString={todoFormString}
                     />
-                    <Todo />
                 </Col>
                 <Col>
                     <TodoList 
                         todoArray={todoArray}
+                        setTodoArray={setTodoArray}
                     />
                 </Col>
             </Row>

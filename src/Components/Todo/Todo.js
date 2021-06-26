@@ -1,28 +1,36 @@
 import React from 'react'
 
+import ArrayTodo from './ArrayTodo';
+import EmptyTodo from './EmptyTodo';
+
 import {
-    Card
+    Card,
+    Container,
+    Button
 } from 'react-bootstrap';
 
-export default  function Todo({ todoArray }) {
-    console.log(todoArray)
+export default  function Todo({ key, text, todoArray, setTodoArray, todo }) {
 
-    if(todoArray == null) {
-        return (
+    const deleteHandler = () => {
+        setTodoArray(todoArray.filter(el => el.id !== todo.id))
+    };
+
+    const editHandler = () => {
+        console.log('click')
+    };
+
+
+
+ 
+    return (
+        <Container>
             <Card>
                 <Card.Body>
-                    <Card.Title>Start a Todo List</Card.Title>
+                    <Card.Title>{text}</Card.Title>
                 </Card.Body>
+                <Button onClick={editHandler}>Edit</Button>
+                <Button onClick={deleteHandler}>Delete</Button>
             </Card>
-        )
-    } else {
-        return todoArray.map((todo, index) => (
-            <Card>
-                <Card.Body>
-                    <Card.Title>{todo.text}</Card.Title>
-                </Card.Body>
-            </Card>
-        ))
-
-    }
+        </Container>
+    )
 }
