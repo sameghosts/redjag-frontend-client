@@ -10,8 +10,7 @@ export default function Search({ setJobQuery }) {
     };
 
     return (
-        <div>
-            <Navbar>
+            <Navbar className='jobSearch'>
                 <Button>Sort</Button>
                 <Button>Filter</Button>
                 <Form inline>
@@ -19,6 +18,5 @@ export default function Search({ setJobQuery }) {
                     <Button variant="outline-success" >Search</Button>
                 </Form>
             </Navbar>
-        </div>
     )
 }
