@@ -1,5 +1,6 @@
 .navbarContainer {
-    width:80%;
+    width:95%;
+    margin: 10 auto;
 }
 
 .jobCard {
@@ -24,6 +25,7 @@
 .jobColTwo {
     height:80vh;
     border: 2px solid grey;
+    overflow: scroll;
 }
 
 .applyButtons {
@@ -33,4 +35,18 @@
 
 .jobDescription {
     white-space: pre-wrap;
+    text-overflow:hidden;
+    overflow: scroll;
+    height: 49vh;
+
+}
+
+.jobNavbar {
+    height: 80vh;
+    justify-content: space-evenly;
+}
+
+.jobSearch {
+    justify-content: space-evenly;
+    align-items: right;
 }

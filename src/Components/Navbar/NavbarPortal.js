@@ -5,6 +5,7 @@ import '../../css/navbar.css';
 //import dummy data
 import jobs from './dummyData';
 //import components
+import NavBar from './NavBar';
 import Search from './Search';
 import JobTable from './JobTable';
 import JobDetails from './JobDetails';
@@ -36,6 +37,9 @@ export default function NavbarPortal() {
             <Search setJobQuery={setJobQuery} />
           </Row>
           <Row>
+            <Col>
+              <NavBar />
+            </Col>
             <Col className="jobColOne">
               <Row>
                 <h1>Job Openings</h1>
@@ -43,14 +47,18 @@ export default function NavbarPortal() {
               </Row>
             </Col>
             <Col className="jobColTwo" xs={8} sm={8} md={8} lg={8}>
-            <Tabs>
-              <Tab eventKey="Jobs" title="Jobs">
-                <JobTable jobs={jobs} /> 
-              </Tab>
-              <Tab eventKey="SaveJobs" title="Save Jobs">
-                <JobTable></JobTable>
-              </Tab>
-            </Tabs>
+              <Row>
+                <Tabs>
+                  <Tab eventKey="Jobs" title="Jobs">
+                    
+                  </Tab>
+                  <Tab eventKey="SaveJobs" title="Save Jobs">
+                  </Tab>
+                </Tabs>
+              </Row>
+              <Row>
+                <JobTable jobs={jobs} />
+              </Row>
             </Col>
           </Row>
         </Container>
