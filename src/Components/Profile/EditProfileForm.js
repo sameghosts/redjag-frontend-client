@@ -26,7 +26,7 @@ export default function EditProfileForm({ editUsername, editFirstname, editLastn
                         </Form.Group>
 
                         <Form.Group controlId="" className="editEmailGroup" >
-                            <Form.Control size="lg" type="email" placeholder="" className="" />
+                            <Form.Control size="lg" type="email" placeholder="Email" className="" />
                         </Form.Group>
 
                         <Button className="" size="lg" variant="primary" type="submit">Save Changes</Button>

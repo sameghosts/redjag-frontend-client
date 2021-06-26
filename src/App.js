@@ -1,5 +1,4 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Test from './Components/Test/Test';
 
