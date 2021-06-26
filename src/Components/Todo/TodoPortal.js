@@ -29,7 +29,9 @@ export default function TodoPortal() {
                     <Todo />
                 </Col>
                 <Col>
-                    <TodoList />
+                    <TodoList 
+                        todoArray={todoArray}
+                    />
                 </Col>
             </Row>
         </Container>

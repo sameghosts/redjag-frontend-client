@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-export default function TodoList() {
+import Todo from './Todo';
+
+export default function TodoList({ todoArray }) {
+    console.log(todoArray)
     return (
         <div>
-            this is where the list will go
+           <h1>Things to do</h1>
+           <Todo todoArray={todoArray} />
         </div>
     )
 }

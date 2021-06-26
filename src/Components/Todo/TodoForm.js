@@ -16,8 +16,9 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
     const submitTodoHandler = (e) => {
         e.preventDefault();
         setTodoArray([
-            ...todoArray, {}
-        ])
+            ...todoArray, { text:todoFormString, completed:false, id:Math.random()*10000}
+        ]);
+        setTodoFormString('');
     }
 
     return (
@@ -29,7 +30,7 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
                             Create a Todo:
                         </Form.Label>
                         <Form.Control type="text" onChange={inputTextHandler} />
-                        <Button>Create</Button>
+                        <Button onClick={submitTodoHandler} type="submit">Create</Button>
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>
