@@ -1,10 +1,10 @@
 # Git Commands for workflow
 In order to get changes to the master repository which is the one I made you need to first set your remote upstream. You will pull down from this after pull requests have been merged. First to set your remote upstream enter:
-### git remote add upstream https://github.com/sameghosts/redjag-frontend-client.git
+>git remote add upstream https://github.com/sameghosts/redjag-frontend-client.git
 
 Then you can check use the following command to pull down changes that have been made to the shared original repository but aren’t on your local forked repo using:
 
-### git pull upstream main
+>git pull upstream main
 
 # Getting Started with Create React App
 
