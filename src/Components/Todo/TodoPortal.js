@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import TodoForm from './TodoForm';
-import Todo from './Todo';
+import DisplayTodo from './DisplayTodo';
 import TodoList from './TodoList';
 
 import {
@@ -14,22 +14,31 @@ export default function TodoPortal() {
     //set States
     const [todoFormString, setTodoFormString] = useState('');
     const [todoArray, setTodoArray] = useState([]);
+    const [displayTodo, setDisplayTodo] = useState({});
 
     return (
         <Container>
             <h1>This is the top level</h1>
             <Row>
                 <Col>
-                    <TodoForm 
-                        setTodoArray={setTodoArray} 
-                        setTodoFormString={setTodoFormString} 
-                        todoArray={todoArray}
-                        todoFormString={todoFormString}
-                    />
-                    <Todo />
+                    <Row>
+                        <TodoForm 
+                            setTodoArray={setTodoArray} 
+                            setTodoFormString={setTodoFormString} 
+                            todoArray={todoArray}
+                            todoFormString={todoFormString}
+                        />
+                    </Row>
+                    <Row>
+                        <DisplayTodo displayTodo={displayTodo} />
+                    </Row>
                 </Col>
                 <Col>
-                    <TodoList />
+                    <TodoList 
+                        todoArray={todoArray}
+                        setTodoArray={setTodoArray}
+                        setDisplayTodo={setDisplayTodo}
+                    />
                 </Col>
             </Row>
         </Container>
