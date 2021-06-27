@@ -8,7 +8,7 @@ import TodoPortal from '../Todo/TodoPortal';
 function Test() {
     return (
         <div>
-            <TodoPortal />
+           
         </div>
     )
 }
