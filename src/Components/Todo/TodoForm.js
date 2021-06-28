@@ -1,7 +1,6 @@
-import React, {useState, useEffect, useRef } from 'react'
+import React from 'react'
 
-import { 
-    Col,
+import {
     Row,
     Container,
     Form,
@@ -33,13 +32,6 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
                         </Form.Label>
                         <Form.Control value={todoFormString} type="text" onChange={inputTextHandler} />
                         <Button onClick={submitTodoHandler} type="submit">Create</Button>
-                    </Form.Group>
-                    <Form.Group>
-                        <Form.Label>
-                            Update a Todo:
-                        </Form.Label>
-                        <Form.Control type="text" />
-                        <Button>Update</Button>
                     </Form.Group>
                 </Form>
             </Row>
