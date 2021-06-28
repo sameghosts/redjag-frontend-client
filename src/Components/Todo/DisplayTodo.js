@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../../css/todo.css';
 
 import {
     Container,
@@ -8,32 +9,47 @@ import {
     Form
 } from 'react-bootstrap'
 
-function DisplayTodo({ displayTodo }) {
+function DisplayTodo({ displayTodo, setDisplayTodo }) {
     const [todoText, setTodoText] = useState('');
-    const [todoComplete, setTodoComplete] = useState(false)
-    const [todoDueDate, setTodoDueDate] = useState('')
-    console.log(displayTodo, "$$$$$$$$$$")
-    console.log(todoText, todoComplete, todoDueDate, "ready to edit")
+    const [todoComplete, setTodoComplete] = useState(false);
+    const [todoDueDate, setTodoDueDate] = useState('');
+
+    const deletedTodoHandler = (e) => {
+        console.log(e.target.value)
+        console.log(displayTodo.title)
+        if (!displayTodo.title) {
+            setTodoText('');
+            setTodoComplete(false);
+            setTodoDueDate('');
+        }
+    };
 
     const textChange = (e) => {
-        console.log('type')
         setTodoText(e.target.value);
     };
 
+    const dueDateChange = (e) => {
+        setTodoDueDate(e.target.value);
+    };
+
+    const completeHandler = (e) => {
+        setTodoComplete(e.target.value);
+    }
+
     const updateTodo = (e) => {
         e.preventDefault();
-        console.log('click')
         displayTodo.text = todoText;
-        displayTodo.Complete = todoComplete;
-        console.log(displayTodo)
+        displayTodo.completed = todoComplete;
+        displayTodo.dueDate = todoDueDate;
+        setDisplayTodo({});
     };
 
     return (
         <Container>
             <Row>
                 <Col>
-                    <h1>
-                        {displayTodo.text}
+                    <h1 onChange={deletedTodoHandler}>
+                        {displayTodo.title}
                     </h1>
                 </Col>
             </Row>
@@ -41,16 +57,30 @@ function DisplayTodo({ displayTodo }) {
                 <Form>
                     <Form.Group>
                         <Form.Label>Completed</Form.Label>
-                        <Form.Check value={true} />
+                        <Form.Check  
+                            name="completed"
+                            type="radio" 
+                            onChange={completeHandler} 
+                            value={true} 
+                            label="True"
+                        />
+                        <Form.Check 
+                            name="completed" 
+                            type="radio" 
+                            onChange={completeHandler} 
+                            value={false} 
+                            label="False"
+                        />
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Date Due</Form.Label>
+                        <Form.Control type="date" onChange={dueDateChange}></Form.Control>
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Notes</Form.Label>  
                         <Form.Control as="textarea" onChange={textChange} />
                     </Form.Group>
-                    <Button onClick={updateTodo}>Update</Button>
+                    <Button onClick={updateTodo} type='submit'>Update</Button>
                 </Form>
             </Row>
         </Container>
