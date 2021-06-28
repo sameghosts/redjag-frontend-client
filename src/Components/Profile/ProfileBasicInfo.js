@@ -1,6 +1,6 @@
 import React from 'react';
-import ProfileQandA from './ProfileQandA';
 import EditProfileForm from './EditProfileForm';
+
 //import boostrap tags
 import { Container, Row, Button } from 'react-bootstrap';
 
@@ -21,8 +21,6 @@ export default function ProfileBasicInfo() {
                 <Button id="dashboardBtn" variant="primary" size="lg" active>
                     Back to your dashboard
                 </Button>
-
-                <ProfileQandA />
 
             </Container>
         </div>
