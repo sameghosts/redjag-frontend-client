@@ -14,8 +14,12 @@ export default function TodoForm({ todoArray, todoFormString, setTodoFormString,
 
     const submitTodoHandler = (e) => {
         e.preventDefault();
+        if (!todoFormString || /^\s*$/.test(todoFormString)) {
+            return;
+        };
+        
         setTodoArray([
-            ...todoArray, { text:todoFormString, completed:false, id:Math.random()*10000}
+            ...todoArray, { title:todoFormString, completed:false, id:Math.random()*10000}
         ]);
         setTodoFormString('');
     }

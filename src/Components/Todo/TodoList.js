@@ -3,7 +3,7 @@ import React from 'react';
 
 import Todo from './Todo';
 
-export default function TodoList({ todoArray, setTodoArray, setDisplayTodo }) {
+export default function TodoList({ todoArray, setTodoArray, setDisplayTodo, completedArray, setCompletedArray, displayTodo }) { 
 
     return (
         <div>
@@ -12,11 +12,14 @@ export default function TodoList({ todoArray, setTodoArray, setDisplayTodo }) {
                 {todoArray.map((todo) => (
                     <Todo 
                         todo={todo}
-                        text={todo.text}
+                        title={todo.title}
                         key={todo.id} 
                         todoArray={todoArray} 
                         setTodoArray={setTodoArray} 
                         setDisplayTodo={setDisplayTodo}
+                        setCompletedArray={setCompletedArray}
+                        completedArray={completedArray}
+                        displayTodo={displayTodo}
                     />
                 ))}
            </ul>

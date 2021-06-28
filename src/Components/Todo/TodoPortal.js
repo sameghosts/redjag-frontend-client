@@ -15,10 +15,34 @@ export default function TodoPortal() {
     const [todoFormString, setTodoFormString] = useState('');
     const [todoArray, setTodoArray] = useState([]);
     const [displayTodo, setDisplayTodo] = useState({});
+    const [completedArray, setCompletedArray] = useState([]);
+
+    useEffect(() => {
+        getLocalTodos();
+    }, []);
+    
+    
+    useEffect(() => {
+        saveLocalTodos();
+    }, [todoArray]);
+
+
+    //save to local
+    const saveLocalTodos = () => {
+        localStorage.setItem('todos', JSON.stringify(todoArray))
+    };
+
+    const getLocalTodos = () => {
+        if(localStorage.getItem('todos') === null) {
+            localStorage.setItem('todos', JSON.stringify([]));
+        } else {
+            let todoLocal = JSON.parse(localStorage.getItem('todos'));
+            setTodoArray(todoLocal);
+        }
+    };
 
     return (
         <Container>
-            <h1>This is the top level</h1>
             <Row>
                 <Col>
                     <Row>
@@ -30,7 +54,7 @@ export default function TodoPortal() {
                         />
                     </Row>
                     <Row>
-                        <DisplayTodo displayTodo={displayTodo} />
+                        <DisplayTodo displayTodo={displayTodo} setDisplayTodo={setDisplayTodo} completedArray={completedArray} setCompletedArray={setCompletedArray} />
                     </Row>
                 </Col>
                 <Col>
@@ -38,6 +62,9 @@ export default function TodoPortal() {
                         todoArray={todoArray}
                         setTodoArray={setTodoArray}
                         setDisplayTodo={setDisplayTodo}
+                        setCompletedArray={setCompletedArray}
+                        completedArray={completedArray}
+                        displayTodo={displayTodo}
                     />
                 </Col>
             </Row>
