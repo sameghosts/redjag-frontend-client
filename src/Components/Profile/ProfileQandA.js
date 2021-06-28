@@ -1,7 +1,7 @@
 import React from 'react'
 
 //import boostrap tags
-import { Container, Row, Button } from 'react-bootstrap';
+import { Container, Row, Button, Form } from 'react-bootstrap';
 
 export default function ProfileQandA() {
     return (
